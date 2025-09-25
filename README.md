@@ -42,8 +42,11 @@ docker run -d \
   -e LOGIN_PASSWORD="你的登录密码" \
   -e ANNOUNCEMENT_TEXT="你的公告内容" \
   --restart unless-stopped \
-  cassianvale/stock-scanner:latest
-  
+  cassianvtouch /etc/nginx/conf.d/default.confale/stock-scanner:latest
+
+#创建挂载文件
+touch /etc/nginx/conf.d/default.conf
+touch ~/nginx/nginx.conf 
 # 运行Nginx容器
 docker run -d \
   --name stock-scanner-nginx \
