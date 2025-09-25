@@ -1,5 +1,11 @@
 # 股票分析系统 (Stock Analysis System)
-
+# command Reference
+列出所有容器（包括停止的）
+docker ps -a
+删除旧容器
+docker rm stock-scanner-app
+查看已有网络
+docker network ls
 ## 简介
 
 基于 https://github.com/DR-lin-eng/stock-scanner 二次修改，感谢原作者  
@@ -20,7 +26,8 @@
 ```
 # 拉取最新版本
 docker pull cassianvale/stock-scanner:latest
-
+# 创建网络
+docker network create stock-scanner-network
 # 启动主应用容器
 docker run -d \
   --name stock-scanner-app \
